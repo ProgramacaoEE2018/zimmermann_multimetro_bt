@@ -44,3 +44,9 @@ Clicando em "Ir para o Multímetro", uma nova janela será aberta, para explorar f
 
 As funções disponíveis são intuitivas e há a possibilidade de voltar para o menu principal.
 Em caso de erros ao ligar o aparelho (apertar On para começar as medições), uma mensagem de erro aparecerá.
+
+# ADIÇÃO DOS ARQUIVOS
+
+Os arquivos do esboço do projeto foram adicionados à pasta Esboco.
+Para o funcionamento completo do programa falta encontrar as bibliotecas específicas do multímetro e fazer alguns ajustes na programação.
+Tentarei acertar os erros e melhorar o programa o quanto antes.

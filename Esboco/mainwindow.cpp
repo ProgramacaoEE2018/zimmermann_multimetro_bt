@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(ui->Mult,SIGNAL(clicked()),this,SLOT(on_Mult_clicked()));
+    this->setWindowTitle("Menu Principal");
 }
 
 
@@ -36,7 +37,9 @@ void MainWindow::on_Beep_clicked()
 void MainWindow::on_Identificar_clicked()
 {
     //QString info (*IDN)
-    QString info ("identificação");
+
+
+    QString info ("Identificação aparecerá aqui na forma 'nome do fabricante', 'modelo', 'serial', 'versão'.");
 
     ui->textBrowser->setText(info);
 
@@ -62,7 +65,7 @@ void MainWindow::on_Corrente_clicked()
 {
     float corrente=0;
     //corrente = FETC?;
-    QString cor ("A corrente é: ");
+    QString cor = QString("A corrente é: %1 A").arg(corrente);
 
    ui->textBrowser->setText(cor);
 }
@@ -70,11 +73,17 @@ void MainWindow::on_Corrente_clicked()
 void MainWindow::on_Faixa_clicked()
 {
     //Abrirá uma nova janela permitindo escolher a faixa de operação do modo atual
+    objmain2 = new EscolheFaixa;
+    objmain2->show();
 }
 
 void MainWindow::on_Status_clicked()
 {
-   //Qstring status (STAT?);
+    QString status ("Status aparecerão aqui.");
+
+    ui->textBrowser->setText(status);
+
+    //Qstring status (STAT?);
 
    //Cada switch informa um dado no quadrado branco do display//
 //   switch (status[0]){
@@ -228,6 +237,111 @@ void MainWindow::on_Status_clicked()
 
 void MainWindow::on_Log_clicked()
 {
+    QString log ("Registro de memória aparecerá aqui.");
+
+    ui->textBrowser->setText(log);
+
     //Da mesma forma que o Status, cada trecho sera analisado e imprimirá uma informação
-    //LOG;
+    //Qstring log (LOG);
+
+   //Cada switch informa um dado no quadrado branco do display//
+    //switch (log[1]){
+    //                case 0:
+    //                    ui->textBrowser->setText("Função AUX \n");
+    //                    break;
+    //                case 1:
+    //                   ui->textBrowser->setText("Função Voltagem \n");
+    //                   break;
+    //                case 2:
+    //                   ui->textBrowser->setText("Função Microcorrente \n");
+    //                   break;
+    //                case 4:
+    //                   ui->textBrowser->setText("Função Corrente \n");
+    //                   break;
+    //                case 5:
+    //                   ui->textBrowser->setText("Função Resistência ou Continuidade \n");
+    //                   break;
+    //                case 6:
+    //                   ui->textBrowser->setText("Função Diodo \n");
+    //                   break;
+    //                case 8:
+    //                   ui->textBrowser->setText("Função Capacitância \n");
+    //                   break;
+    //                case 9:
+    //                   ui->textBrowser->setText("Função Frequência \n");
+    //                   break;
+
+    //QString cor = QString("A medida atual é: %1%2%3%4").arg(log[3]).arg(log[4]).arg(log[5]).arg(log[6]);
+    //A linha acima mostrará os quatro digitos da medição feita
+
+    //switch (log[7]){
+    //                case 1:
+    //                    ui->textBrowser->setText("Alcance automático ligado \n");
+    //                    break;
+    //                case 2:
+    //                   ui->textBrowser->setText("O valor atual é negativo \n");
+    //                   break;
+
+    //switch (log[8]){
+    //                case 1:
+    //                    ui->textBrowser->setText("Modo DC \n");
+    //                    break;
+    //                case 2:
+    //                   ui->textBrowser->setText("Modo AC \n");
+    //                   break;
+    //                case 4:
+    //                   ui->textBrowser->setText("Overload \n");
+    //                   break;
+
+    //switch (log[11]){
+    //                case 0:
+    //                    ui->textBrowser->setText("Não está no modo temperatura \n");
+    //                    break;
+    //                case 1:
+    //                   ui->textBrowser->setText("Graus Fahrenheit \n");
+    //                   break;
+    //                case 2:
+    //                   ui->textBrowser->setText("Grau Celsius \n");
+    //                   break;
+
+    // //switch (log[12]){
+    //                case 1:
+    //                    ui->textBrowser->setText("Modo relativo ligado \n");
+    //                    break;
+    //                case 2:
+    //                   ui->textBrowser->setText("Modo Trigger Hold ligado \n");
+    //                   break;
+    //                case 4:
+    //                   ui->textBrowser->setText("Modo Auto Hold ligado \n");
+    //                   break;
+
+    //switch (log[14]){
+    //                case 0:
+    //                    ui->textBrowser->setText("Modo capacitância \n");
+    //                    break;
+    //                case 1:
+    //                   ui->textBrowser->setText("Modo AUX temperatura \n");
+    //                   break;
+    //                case 2:
+    //                   ui->textBrowser->setText("Modo AUX mV \n");
+    //                   break;
+}
+
+void MainWindow::on_BacklightOn_clicked()
+{
+    //SYST:BLIT 1
+}
+
+void MainWindow::on_Bateria_clicked()
+{
+    //int bateria = SYST:BATT?
+    int bateria = 100;
+    QString bat = QString("A bateria está com : %1 %").arg(bateria);
+
+   ui->textBrowser->setText(bat);
+}
+
+void MainWindow::on_BacklightOff_clicked()
+{
+    //SYST:BLIT 0
 }

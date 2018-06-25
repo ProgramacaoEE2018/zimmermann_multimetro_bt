@@ -26,14 +26,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    multiemetro.cpp
+    multiemetro.cpp \
+    escolhefaixa.cpp
 
 HEADERS += \
         mainwindow.h \
-    multiemetro.h
+    multiemetro.h \
+    escolhefaixa.h
 
 FORMS += \
         mainwindow.ui \
-    multiemetro.ui
-
-DISTFILES +=
+    multiemetro.ui \
+    escolhefaixa.ui

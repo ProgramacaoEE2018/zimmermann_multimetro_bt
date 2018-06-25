@@ -56,7 +56,13 @@ Clicando em "Ir para o Multímetro", uma nova janela será aberta, para explorar f
 As funções disponíveis são intuitivas e há a possibilidade de voltar para o menu principal.
 Em caso de erros ao ligar o aparelho (apertar On para começar as medições), uma mensagem de erro aparecerá.
 
-*A GUI evoluiu durante o desenvolvimento do projeto.
+*A GUI evoluiu durante o desenvolvimento do projeto, adicionando botões e uma nova janela.
+
+
+![Novo Menu Principal](Menu_principal.PNG)
+
+![Escolha de Faixa (e função)](Faixa.PNG)
+
 
 # ADIÇÃO DOS ARQUIVOS
 
